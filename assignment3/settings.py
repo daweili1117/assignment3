@@ -141,8 +141,8 @@ MEDIA_URL = '/media/'
 #
 
 #
-# LOGIN_REDIRECT_URL = 'home'
-# LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 #
 AUTH_USER_MODEL = "users_management.UserManage"
 AUTH_USER_MODEL = 'users.CustomUser'

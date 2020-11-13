@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">{% extends 'base.html' %}
+
+{% block title %}Project tasks management system{% endblock title %}
+
+{% block content %}
+
+
+    <div class="pull-left">
+            <p><a href="{% url 'TaskNew' %}" role="button" class="btn btn-info">Add new task</a>
+    </div>
+
+
+    {% if tasks is not null %}
+    <div>
+            <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Task</th>
+                    <th scope="col">Project</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Created</th>
+                    <th scope="col">Coded</th>
+                    <th scope="col">Tested</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                    <tr>
+                        <td><span class="font-muted"> {{ task.task }} </span></td>
+                        <td><span class="font-muted"> {{ task.project }}  </span></td>
+                        <td><span class="font-muted"> {{ task.status }} </span></td>
+                        <td><span class="font-muted"> {{ task.create_by }} </span></td>
+                        <td><span class="font-muted"> {{ task.employee_code }} </span></td>
+                        <td><span class="font-muted"> {{ task.employee_test }} </span></td>
+                        <td>
+                            <span>
+                                <a role="button">Edit</a>
+                            </span>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+            </tbody>
+            </table>
+         </div>
+    {% endif %}
+{% endblock content %}

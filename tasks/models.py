@@ -16,7 +16,7 @@ class Project(models.Model):
         return "%s" % self.project_name
     #
     # def get_absolute_url(self):
-    #     return reverse('building_detail', args=[str(self.id)])
+    #     return reverse('project_detail', args=[str(self.id)])
 
 
 Status = (
@@ -48,6 +48,10 @@ class Task(models.Model):
 
     def __str__(self):
         return "%s" % self.task_no
+
+    # def get_absolute_url(self):
+    #     return reverse('tasks_detail', args=[str(self.id)])
+
 
 
 # brew install graphviz

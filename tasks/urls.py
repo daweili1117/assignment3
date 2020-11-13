@@ -1,13 +1,12 @@
 from django.urls import path
-from .views import TaskListView, TaskNewView
+from .views import TaskListView, TaskNewView, TaskUpdateView, TaskDeleteView
 
 
 
 urlpatterns = [
     path('tasklist/', TaskListView.as_view(), name='taskslist'),
     path('tasknew/', TaskNewView.as_view(), name='TaskNew'),
-    # path('workOrderNew/', workOrderCreatView.as_view(), name='workOrderNew'),
-    # path('<int:pk>/edit/', workOrderEditView.as_view(), name='work_order_edit'),
-    # path('<int:pk>/', WorkOrdeDetailView.as_view(), name='work_order_pull'),
-    #
+    path('<int:pk>/taskupdate', TaskUpdateView.as_view(), name='TaskUpdate'),
+    path('<int:pk>/tasldelete', TaskDeleteView.as_view(), name='TaskDelete'),
+
 ]

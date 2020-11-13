@@ -36,8 +36,12 @@
                         <td><span class="font-muted"> {{ task.employee_test }} </span></td>
                         <td>
                             <span>
-                                <a role="button">Edit</a>
+                                <a href="{% url 'TaskUpdate' task.pk %}" role="button">Update</a>
                             </span>
+                            <span>
+                                <a href="{% url 'TaskDelete' task.pk %}" role="button">Delete</a>
+                            </span>
+
                         </td>
                     </tr>
 

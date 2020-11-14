@@ -1,14 +1,13 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404
-from django.utils import timezone
 from django.views.generic import ListView, CreateView, DetailView, UpdateView, DeleteView
-from django.views.generic.edit import FormView
 from .models import Task, Project
 from django.urls import reverse
 from crispy_forms.layout import Button, Submit
 from crispy_forms.bootstrap import FormActions
 from django.urls import reverse_lazy
 from .forms import CreateForm, EditForm
+    # , DetailForm
 
 
 class TaskListView(LoginRequiredMixin, ListView):
@@ -53,3 +52,14 @@ class TaskDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'taskdelete.html'
     success_url = reverse_lazy('taskslist')
 
+
+
+#
+# class TaskDetailView(LoginRequiredMixin, UpdateView):
+#     template_name = 'taskdetail.html'
+#     models = Task
+#     form_class = DetailForm
+#
+#
+#     def get_success_url(self):
+#         return reverse('taskslist')

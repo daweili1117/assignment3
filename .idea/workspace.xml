@@ -20,10 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2cb2713-b310-4864-b64c-2fa14d8700dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/taskdelete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/taskupdate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/taskdetail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks.html" afterDir="false" />

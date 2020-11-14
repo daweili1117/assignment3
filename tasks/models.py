@@ -41,10 +41,10 @@ class Task(models.Model):
     description = models.TextField(max_length=255, null=True, blank=True)
     note = models.TextField(max_length=255, null=True, blank=True)
     status = models.CharField(max_length=50, choices=Status, null=True, blank=True)
-    work_creat_date = models.DateTimeField(auto_now_add=True)
-    work_code_date = models.DateTimeField(auto_now_add=False, null=True, blank=True)
-    work_test_date = models.DateTimeField(auto_now_add=False, null=True, blank=True)
-    work_done_date = models.DateTimeField(auto_now_add=False, null=True, blank=True)
+    work_creat_date = models.DateField(auto_now_add=True)
+    work_code_date = models.DateField(auto_now_add=False, null=True, blank=True)
+    work_test_date = models.DateField(auto_now_add=False, null=True, blank=True)
+    work_done_date = models.DateField(auto_now_add=False, null=True, blank=True)
 
     def __str__(self):
         return "%s" % self.task_no

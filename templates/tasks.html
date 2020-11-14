@@ -28,7 +28,11 @@
             <tbody>
                 {% for task in tasks %}
                     <tr>
-                        <td><span class="font-muted"> {{ task.task }} </span></td>
+                        <td><span class="font-muted">
+{#                            <a href="{% url 'TaskDetail' task.pk %}">#}
+                            {{ task.task }}
+{#                            </a>#}
+                        </span></td>
                         <td><span class="font-muted"> {{ task.project }}  </span></td>
                         <td><span class="font-muted"> {{ task.status }} </span></td>
                         <td><span class="font-muted"> {{ task.create_by }} </span></td>

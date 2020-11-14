@@ -54,6 +54,8 @@ class TaskDeleteView(LoginRequiredMixin, DeleteView):
 
 
 
+
+
 #
 # class TaskDetailView(LoginRequiredMixin, UpdateView):
 #     template_name = 'taskdetail.html'
@@ -63,3 +65,4 @@ class TaskDeleteView(LoginRequiredMixin, DeleteView):
 #
 #     def get_success_url(self):
 #         return reverse('taskslist')
+

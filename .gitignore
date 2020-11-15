@@ -6,7 +6,7 @@ __pycache__
 myvenv
 venv
 db.sqlite3
-/static
+/tasks/static
 .DS_Store
 
 # Django #

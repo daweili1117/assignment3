@@ -41,7 +41,12 @@
                   aria-labelledby="userMenu">
                   <a class="dropdown-item"
 {#                     href="{% url 'changePassword' %}"#}
-                  >Change password</a>
+                  >Change password
+{#                      <a class="dropdown-item" href="{% url 'password_reset'%}">Forget password</a>#}
+{#                  <div class="dropdown-divider"></div>#}
+{#                <a class="dropdown-item" href="{% url 'password_change'%}">Change password</a>#}
+{#                  <div class="dropdown-divider"></div>#}
+
                    <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{% url 'logout' %}">
                     Log Out</a>

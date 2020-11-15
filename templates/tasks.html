@@ -9,7 +9,7 @@
 {% load static %}
     {%if user.is_manager is True%}
         <div class="pull-left" >
-            <button type="button" class="btn btn-success" href="{% url 'TaskNew' %}">Add New Task</button>
+            <p><a href="{% url 'TaskNew' %}" role="button" class="btn btn-info">Add New Task</a>
         </div>
     {% endif %}
 <br>

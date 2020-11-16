@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>New Task</h1>
+    <div class="form-group row">
+        <form action="" method="post">{% csrf_token %}
+            <table class="table-borderless">{{ form.as_table }}</table>
+          <button class="btn btn-success ml-2" type="submit">Save</button>
+            <a href="{% url 'taskslist' %}" class="btn btn-secondary ml-2">
+            Cancel</a>
+        </form>
+    </div>
+{% endblock content %}

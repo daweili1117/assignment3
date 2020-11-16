@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">{% extends 'base.html' %}
+
+{% block title %}Project tasks management system{% endblock title %}
+
+{% block content %}
+
+
+{% load static %}
+    {%if user.is_manager is True%}
+        <div class="pull-left" >
+            <p><a href="{% url 'TaskNew' %}" role="button" class="btn btn-info">Add New Task</a>
+        </div>
+    {% endif %}
+<br>
+
+    {% if tasks is not null %}
+    <div>
+    <table class="table">
+      <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Task</th>
+                    <th scope="col">Project</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Created</th>
+                    <th scope="col">Coded</th>
+                    <th scope="col">Tested</th>
+                    <th scope="col"></th>
+                    {%if user.is_manager is True%}
+                    <th scope="col"></th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                    <tr>
+                        <td><span class="font-muted">
+{#                            <a href="{% url 'TaskDetail' task.pk %}">#}
+                            {{ task.task }}
+{#                            </a>#}
+                        </span></td>
+                        <td><span class="font-muted"> {{ task.project }}  </span></td>
+                        <td><span class="font-muted" color = red> {{ task.status }}</span>
+                        <td><span class="font-muted"> {{ task.create_by }} </span></td>
+                        <td><span class="font-muted"> {{ task.employee_code }} </span></td>
+                        <td><span class="font-muted"> {{ task.employee_test }} </span></td>
+                            <td>
+                                <span>
+                                    <a class="btn btn-info" href="{% url 'TaskUpdate' task.pk %}" role="button" >Update</a>
+                                </span>
+                            </td>
+                            <td>
+                                {%if user.is_manager is True%}
+                                <span>
+                                    <a class="btn btn-danger" href="{% url 'TaskDelete' task.pk %}" role="button">Delete</a>
+                                </span>
+                                {% endif %}
+                            </td>
+
+
+                {% endfor %}
+
+            </tbody>
+            </table>
+         </div>
+
+    {% endif %}
+{% endblock content %}

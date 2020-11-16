@@ -154,6 +154,10 @@ AUTH_USER_MODEL = "users_management.UserManage"
 AUTH_USER_MODEL = 'users.CustomUser'
 
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/mah/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL ='/media/'
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
